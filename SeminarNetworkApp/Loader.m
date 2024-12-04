@@ -19,11 +19,11 @@
 };
 
 - (NSData*)dataWithJson:(NSDictionary *)jsonDict error:(NSError**)error {
-    return [NSJSONSerialization dataWithJSONObject:jsonDict options:kNilOptions error:error];
+    return [NSJSONSerialization dataWithJSONObject:jsonDict options: kNilOptions error:error];
 }
 
 - (NSDictionary*)parseJsonData:(NSData*)data error:(NSError**)error {
-    return [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:error];
+    return [NSJSONSerialization JSONObjectWithData:data options: NSJSONReadingAllowFragments error:error];
 }
 
 - (void)perfomeGetRequests:(NSString *)stringUrl arguments:(NSDictionary *)arguments myblock:(void (^)(NSDictionary*, NSError*))block {

@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 #import "Loader.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 
